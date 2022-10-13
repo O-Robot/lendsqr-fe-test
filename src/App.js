@@ -1,10 +1,8 @@
-
-import Login from './pages/Login';
+import Login from "./pages/Login";
+import "./styles/app.scss"
 
 function App() {
-  return (
-    <div></div>
-  );
+  return <Login />;
 }
 
 export default App;

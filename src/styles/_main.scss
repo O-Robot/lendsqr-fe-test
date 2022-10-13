@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@400;500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'AvenirNextRegular';
+    src: local('AvenirNextRegular'),
+         url('../styles/fonts/AvenirNextLTPro-Regular.otf') format("opentype"),
+}
+
+@font-face {
+    font-family: 'AvenirNextBold';
+    src: local('AvenirNextBold'),
+         url('../styles/fonts/AvenirNextLTPro-Bold.otf') format("opentype"),
+}
+
+@font-face {
+    font-family: 'AvenirNextLT';
+    src: local('AvenirNextLT'),
+         url('../styles/fonts/AvenirNextLTPro-It.otf') format("opentype"),
+}
+html,body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+}

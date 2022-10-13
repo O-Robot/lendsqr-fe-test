@@ -1,0 +1,23 @@
+input{
+    background: var(--primary-white);
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    border-radius: 5px;
+    padding: 15px 15px;
+}
+
+input::placeholder{
+    color: var(--primary-darker-blue);
+    font-weight: 400;
+    opacity: 0.6;
+    line-height: 19px;
+}
+
+.field-icon {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 2rem;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}

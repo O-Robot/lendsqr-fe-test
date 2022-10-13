@@ -1,0 +1,148 @@
+.login_container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+    font-family: 'AvenirNextRegular';
+}
+
+.login-first-half{
+    padding: 30px 20px;
+    margin: 20px 50px;  
+    display: grid;
+}
+
+.login-img{
+    align-self: start;
+    justify-self: center;
+}
+
+.login-second-half{
+    background: #FFFFFF;
+    box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+}
+
+.login-second-half .logo-container{
+    display: none;
+}
+
+.login-form-container{
+    margin: 25px 50px;
+    padding: 100px 50px;
+
+    h4{
+        font-size: 40px;
+        margin-bottom: 0;
+        color: var(--primary-dark-blue);
+        font-weight: 700;
+        font-family: 'AvenirNextBold';
+        letter-spacing: -0.04em;
+    }
+
+    p{
+        color: var(--primary-darker-blue);
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    a{
+        display: block;
+        color: var(--primary-light-blue);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        line-height: 16px;
+        text-align: left;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.login-form{
+    margin-top: 60px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px
+}
+
+.password-input-box{
+    position: relative;
+    background: #FFFFFF;
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    border-radius: 5px;
+
+    input{
+        border: transparent;
+        width: 100%;
+    }
+
+    input:focus{
+        border: transparent;
+    }
+
+    span{
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--primary-light-blue);
+        letter-spacing: 0.1em;
+        font-family: 'AvenirNextBold';
+    }
+}
+
+.login-btn{
+    width: 100%
+}
+
+@media (max-width: 1024px) {
+    .login_container{
+        align-content: center;
+        margin: auto
+    }
+
+    .login-first-half{
+        padding: 30px;
+        margin: auto
+    }
+
+    .login-form-container{
+        margin: auto;
+    }
+
+    .login-form{
+        width: 95%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-first-half{
+        display: none;
+    }
+
+    .login_container{
+        display: block;
+        padding: 10px 15px;
+        align-content: center;
+        margin: auto
+    }
+
+    .login-second-half .logo-container{
+        display: block;
+        margin: 10px 20px;
+    }
+
+    .login-form-container{
+        padding: 15px;
+        margin: auto;
+    }
+
+    .login-form{
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
