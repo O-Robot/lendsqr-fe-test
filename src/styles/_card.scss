@@ -1,0 +1,28 @@
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  height: 160px;
+  padding: 20px 25px;
+
+  h5 {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--primary-darker-blue);
+    margin: 10px 0px 0px 0px;
+  }
+
+  p {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: var(--primary-dark-blue);
+  }
+}
