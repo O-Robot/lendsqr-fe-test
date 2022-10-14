@@ -4,12 +4,13 @@ import { Link, useLocation } from "react-router-dom"
 
 
 const Sidebar = () => {
-  const { showSidebar, setShowSidebar } = useUserContext();
+  const { showNav, setshowNav } = useUserContext();
+ 
 
   const isActive = useLocation().pathname;
   return (
     <>
-      <div className={showSidebar ? `sidebar` : `sidebar show`}>
+      <div className={showNav ? `sidebar` : `sidebar show`}>
         <div className="sidebar-content">
           <Link to="#" className="list-item org">
             <div>
@@ -21,7 +22,7 @@ const Sidebar = () => {
             </div>
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="/dashboard"
             className={
               isActive.includes("/dashboard") ? "list-item active" : "list-item"
@@ -33,7 +34,7 @@ const Sidebar = () => {
           <br />
           <p className="subhead">Customers</p>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="/users"
             className={
               isActive.includes("/users") ? "list-item active" : "list-item"
@@ -43,7 +44,7 @@ const Sidebar = () => {
             Users
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -53,7 +54,7 @@ const Sidebar = () => {
             Guarantors
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -63,7 +64,7 @@ const Sidebar = () => {
             Loans
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -73,7 +74,7 @@ const Sidebar = () => {
             Decision Models
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -83,7 +84,7 @@ const Sidebar = () => {
             Savings
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -93,7 +94,7 @@ const Sidebar = () => {
             Loan Requests
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -103,7 +104,7 @@ const Sidebar = () => {
             Whitelist
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -114,7 +115,7 @@ const Sidebar = () => {
           </Link>
           <p className="subhead mt-6">BUSINESSES</p>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -124,7 +125,7 @@ const Sidebar = () => {
             Organization
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -134,7 +135,7 @@ const Sidebar = () => {
             Loan Products
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -144,7 +145,7 @@ const Sidebar = () => {
             Savings Products
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -154,7 +155,7 @@ const Sidebar = () => {
             Fees and Charges
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -164,7 +165,7 @@ const Sidebar = () => {
             Transaction
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -174,7 +175,7 @@ const Sidebar = () => {
             Services
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -184,7 +185,7 @@ const Sidebar = () => {
             Service Account
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -194,7 +195,7 @@ const Sidebar = () => {
             Settlements
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -205,7 +206,7 @@ const Sidebar = () => {
           </Link>
           <p className="subhead mt-6">Settings</p>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -215,7 +216,7 @@ const Sidebar = () => {
             Preference
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
@@ -225,7 +226,7 @@ const Sidebar = () => {
             Fees and Pricing
           </Link>
           <Link
-            onClick={() => setShowSidebar(true)}
+            onClick={() => setshowNav(true)}
             to="#"
             className={
               isActive.includes("/dashboard") ? "list-item active" : "list-item"

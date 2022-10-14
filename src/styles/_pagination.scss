@@ -1,0 +1,126 @@
+
+
+.pagination-container {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+  
+}
+.pagination-container {
+  
+    .pagination-item {
+      padding: 0 12px;
+      height: 32px;
+      text-align: center;
+      margin: auto 4px;
+      color: var(--primary-dark-blue);
+      display: flex;
+      box-sizing: border-box;
+      align-items: center;
+      letter-spacing: 0.01071em;
+      border-radius: 16px;
+      min-width: 32px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+  
+      &.dots:hover {
+        background-color: transparent;
+        cursor: default;
+      }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        cursor: pointer;
+      }
+  
+      &.selected {
+        font-weight: 600;
+      }
+  
+      .arrow {
+        &::before {
+          position: relative;
+          /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+          content: '';
+          /* By using an em scale, the arrows will size with the font */
+          display: inline-block;
+          width: 0.4em;
+          height: 0.4em;
+          border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+          border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+        }
+  
+        &.left {
+          transform: rotate(-135deg) translate(-50%);
+        }
+  
+        &.right {
+          transform: rotate(45deg);
+        }
+      }
+  
+      &.disabled {
+        pointer-events: none;
+  
+        .arrow::before {
+          border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+          border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+        }
+  
+        &:hover {
+          background-color: transparent;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  .show_div{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    color: var(--primary-dark-blue)
+  }
+  .show_number{    
+    
+background: rgba(33, 63, 125, 0.1);
+border-radius: 4px;
+    
+    padding: 8px;
+    line-height: 20px;
+    letter-spacing: 0.75px;   
+}
+
+  /* ------------------MEDIA QUERY SECTION ------------------------- */
+/* Media query for tablets and screens higher */
+@media (max-width: 768px) {
+    .pagination-container{
+      display: block;
+      overflow-x: scroll;
+    }
+
+    .pagination-container::-webkit-scrollbar{
+      display: none;
+    }
+
+    .show_div{
+        font-weight: 500;
+        font-size: 14px;
+        margin-left: 20px;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .show_number{    
+        background: #EFF6EF;
+        border-radius: 6px;
+        padding: 8px;
+        line-height: 20px;
+        letter-spacing: 0.75px;
+      }
+    
+}
