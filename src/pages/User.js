@@ -34,7 +34,7 @@ const User = () => {
   const indexOfLastUser = currentPage * pageSize;
   const indexOfFirstUser = indexOfLastUser - pageSize;
   const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
-  console.log('user:', indexOfLastUser)
+  // console.log('user:', indexOfLastUser)
 
   const getMoreItemsByOffset = (page) => {
     setCurrentPage(page);

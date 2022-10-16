@@ -68,7 +68,7 @@ const Table = ({ headers, content }) => {
         </tr>
       </thead>
       <tbody>
-        {console.log('content:',content)}
+        {/* {console.log('content:',content)} */}
         {content.map((value, key) => {
           return (
             <tr key={key}>
