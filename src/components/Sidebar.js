@@ -1,20 +1,21 @@
 import React from "react";
 import { useUserContext } from "../context/Context";
-import { Link, useLocation } from "react-router-dom"
-
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
-  const { showNav, setshowNav } = useUserContext();
+  const { showSidebar, setshowSidebar } = useUserContext();
  
-
   const isActive = useLocation().pathname;
   return (
     <>
-      <div className={showNav ? `sidebar` : `sidebar show`}>
+      <div className={showSidebar ? `sidebar` : `sidebar show`}>
         <div className="sidebar-content">
           <Link to="#" className="list-item org">
             <div>
-              <img src="./assets/icons/briefcase.svg" alt="briefcase-icon" />
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/icons/briefcase.svg`}
+                alt="briefcase-icon"
+              />
             </div>
             <div className="flex">
               Switch Organization
@@ -22,217 +23,280 @@ const Sidebar = () => {
             </div>
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="/dashboard"
             className={
               isActive.includes("/dashboard") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/home.svg" alt="home" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/home.svg`}
+              alt="home"
+            />
             Dashboard
           </Link>
           <br />
           <p className="subhead">Customers</p>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="/users"
             className={
               isActive.includes("/users") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/user-friends.svg" alt="users" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/user-friends.svg`}
+              alt="users"
+            />
             Users
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/users.svg" alt="users" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/users.svg`}
+              alt="users"
+            />
             Guarantors
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/sack.svg" alt="loans" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/sack.svg`}
+              alt="loans"
+            />
             Loans
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/handshake-regular.svg" alt="models" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/handshake-regular.svg`}
+              alt="models"
+            />
             Decision Models
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/piggy-bank.svg" alt="savings" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/piggy-bank.svg`}
+              alt="savings"
+            />
             Savings
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/hand-holding.svg" alt="requests" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/hand-holding.svg`}
+              alt="requests"
+            />
             Loan Requests
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/user-check.svg" alt="whitelist" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/user-check.svg`}
+              alt="whitelist"
+            />
             Whitelist
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/user-times.svg" alt="karma" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/user-times.svg`}
+              alt="karma"
+            />
             Karma
           </Link>
           <p className="subhead mt-6">BUSINESSES</p>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/briefcase.svg" alt="briefcase-icon" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/briefcase.svg`}
+              alt="briefcase-icon"
+            />
             Organization
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/sack.svg" alt="products" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/sack.svg`}
+              alt="products"
+            />
             Loan Products
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/group.svg" alt="savings-product" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/group.svg`}
+              alt="savings-product"
+            />
             Savings Products
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/coins-solid.svg" alt="fees" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/coins-solid.svg`}
+              alt="fees"
+            />
             Fees and Charges
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/icon.svg" alt="transaction" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/icon.svg`}
+              alt="transaction"
+            />
             Transaction
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/galaxy.svg" alt="services" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/galaxy.svg`}
+              alt="services"
+            />
             Services
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/user-cog.svg" alt="account" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/user-cog.svg`}
+              alt="account"
+            />
             Service Account
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/scroll.svg" alt="settlement" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/scroll.svg`}
+              alt="settlement"
+            />
             Settlements
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/chart-bar.svg" alt="reports" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/chart-bar.svg`}
+              alt="reports"
+            />
             Reports
           </Link>
           <p className="subhead mt-6">Settings</p>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/sliders-h.svg" alt="preference" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/sliders-h.svg`}
+              alt="preference"
+            />
             Preference
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/hi") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/badge-percent.svg" alt="pricing" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/badge-percent.svg`}
+              alt="pricing"
+            />
             Fees and Pricing
           </Link>
           <Link
-            onClick={() => setshowNav(true)}
+            onClick={() => setshowSidebar(true)}
             to="#"
             className={
               isActive.includes("/dashboard") ? "list-item active" : "list-item"
             }
           >
-            <img src="./assets/icons/clipboard-list.svg" alt="alt-logs" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icons/clipboard-list.svg`}
+              alt="alt-logs"
+            />
             Audit Logs
           </Link>
         </div>

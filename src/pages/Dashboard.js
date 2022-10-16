@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Card from "../components/Card";
 import Layout from "../components/Layout";
+import { BlankPage } from "./UserDetails";
 
 const Dashboard = () => {
   const [isOpen, setisOpen] = useState(false);
@@ -16,6 +17,7 @@ const Dashboard = () => {
         <Card />
         <Card />
       </div>
+      <BlankPage />
     </Layout>
   );
 };

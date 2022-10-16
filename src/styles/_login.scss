@@ -48,7 +48,7 @@
         display: block;
         color: var(--primary-light-blue);
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: bold;
         font-size: 12px;
         letter-spacing: 0.1em;
         line-height: 16px;
@@ -146,3 +146,11 @@
     }
 }
 
+.signup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup a {
+    text-decoration: none;
+}

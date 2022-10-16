@@ -45,6 +45,10 @@
     color: var(--primary-dark-blue);
   }
 
+  .label {
+     white-space: nowrap;
+  }
+
   .filter-actions {
     display: flex;
     gap: 14px;

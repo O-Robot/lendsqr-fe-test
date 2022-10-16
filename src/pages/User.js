@@ -27,12 +27,14 @@ const User = () => {
     setCount(users.length);
     if (users.length > 0) {
       setLoader(false);
+      // setPageSize(10);
     }
   }, [users]);
 
   const indexOfLastUser = currentPage * pageSize;
   const indexOfFirstUser = indexOfLastUser - pageSize;
   const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
+  console.log('user:', indexOfLastUser)
 
   const getMoreItemsByOffset = (page) => {
     setCurrentPage(page);
@@ -43,25 +45,26 @@ const User = () => {
         <Load />
       ) : (
         <>
+        {" "}
           <p className="page-title">Users</p>
           <div className="card-container">
             <Card
-              image="./assets/icons/two-figures.svg"
+              image={`${process.env.PUBLIC_URL}/assets/icons/two-figures.svg`}
               title="User"
               content="2,457"
             />
             <Card
-              image="./assets/icons/active-users.svg"
+              image={`${process.env.PUBLIC_URL}/assets/icons/active-users.svg`}
               title="Active User"
               content="2,457"
             />
             <Card
-              image="./assets/icons/users-with-loans.svg"
+              image={`${process.env.PUBLIC_URL}/assets/icons/users-with-loans.svg`}
               title="Users With Loans"
               content="2,457"
             />
             <Card
-              image="./assets/icons/users-with-savings.svg"
+              image={`${process.env.PUBLIC_URL}/assets/icons/users-with-savings.svg`}
               title="Users with savings"
               content="2,457"
             />
@@ -75,6 +78,7 @@ const User = () => {
             totalCount={count}
             pageSize={pageSize}
             onPageChange={(page) => getMoreItemsByOffset(page)}
+            setPageSize={setPageSize}
           />
         </>
       )}

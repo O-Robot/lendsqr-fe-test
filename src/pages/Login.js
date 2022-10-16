@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [passwordType, setPasswordType] = useState("password");
   const [showPassword, setShowPassword] = useState(false);
   const [passwordInput, setpasswordInput] = useState("");
 
+  let history = useNavigate();
   const passwordChange = (e) => {
     setpasswordInput(e.target.value);
   };
@@ -23,17 +25,23 @@ const Login = () => {
       <div className="login_container">
         <div className="login-first-half">
           <div className="logo-container">
-            <img src="./assets/images/logo.svg" alt="logo" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+              alt="logo"
+            />
           </div>
           <img
-            src="./assets/images/pablo-sign-in.svg"
+            src={`${process.env.PUBLIC_URL}/assets/images/pablo-sign-in.svg`}
             alt="pablo-sign-in"
             className="login-img"
           />
         </div>
         <div className="login-second-half">
           <div className="logo-container">
-            <img src="./assets/images/logo.svg" alt="logo" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+              alt="logo"
+            />
           </div>
           <div className="login-form-container">
             <h4>Welcome!</h4>
@@ -51,8 +59,12 @@ const Login = () => {
                   {showPassword ? "Hide" : "Show"}
                 </span>
               </div>
-              <a href="/#">Forgot Password?</a>
+              <div className="signup">
+                <a href="/#"><b>Forgot Password?</b></a>
+                <a href="/#"><b>SIGN UP</b></a>
+              </div>
               <button
+                onClick={() => history("/dashboard")}
                 className="btn btn-green login-btn"
               >
                 Log In

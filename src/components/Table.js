@@ -68,12 +68,13 @@ const Table = ({ headers, content }) => {
         </tr>
       </thead>
       <tbody>
+        {console.log('content:',content)}
         {content.map((value, key) => {
           return (
             <tr key={key}>
               <td>{value.orgName}</td>
               <td>{value.userName}</td>
-              <td>{value.email}</td>
+              <td>{value.email.toLowerCase()}</td>
               <td>{value.phoneNumber}</td>
               <td>{moment(value.createdAt).format("dddd, MMMM Do, h:mm a")}</td>
               <td
@@ -108,16 +109,22 @@ const Table = ({ headers, content }) => {
                     <div className="tool-tip">
                       <ul>
                         <li onClick={() => handleClick(value.id)}>
-                          <img src="./assets/icons/view.svg" alt="view" />
+                          <img
+                            src={`${process.env.PUBLIC_URL}/assets/icons/view.svg`}
+                            alt="view"
+                          />
                           View Details
                         </li>
                         <li>
-                          <img src="./assets/icons/cancel.svg" alt="cancel" />
+                          <img
+                            src={`${process.env.PUBLIC_URL}/assets/icons/cancel.svg`}
+                            alt="cancel"
+                          />
                           Blacklist User
                         </li>
                         <li>
                           <img
-                            src="./assets/icons/activate.svg"
+                            src={`${process.env.PUBLIC_URL}/assets/icons/activate.svg`}
                             alt="activate"
                           />
                           Activate User

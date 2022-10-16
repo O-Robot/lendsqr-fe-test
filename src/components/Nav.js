@@ -2,16 +2,21 @@ import React from "react";
 import { useUserContext } from "../context/Context";
 
 const Nav = () => {
-  const { showNav, setShowNav } = useUserContext();
+   const { showSidebar, setShowSidebar } = useUserContext();
 
-  const toggleNav = () => {
-    setShowNav(!showNav);
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
   };
+  
   return (
     <>
       <div className="navbar">
         <div className="navbar-content">
-          <img className="logo" src="" alt="lendsqr-logo" />
+          <img
+            className="logo"
+            src={`${process.env.PUBLIC_URL}/assets/logo/Group.svg`}
+            alt="lendsqr-logo"
+          />
           <div className="search-bar">
             <input type="text" placeholder="Search for anything" />
             <span className="material-symbols-outlined search-icon">
@@ -21,9 +26,12 @@ const Nav = () => {
           <div className="navbar-actions">
             <a href="/#">Docs</a>
             <div className="logged-in-user">
-              <img src="./assets/icons/bell.svg" alt="notifications" />
               <img
-                src="./assets/images/image.png"
+                src={`${process.env.PUBLIC_URL}/assets/icons/bell.svg`}
+                alt="notifications"
+              />
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/images/image.png`}
                 className="user-image"
                 alt="user-img"
               />
@@ -35,12 +43,12 @@ const Nav = () => {
         <div className="navbar-mobile">
           <img
             className="logo"
-            src="./assets/logo/Group.svg"
+            src={`${process.env.PUBLIC_URL}assets/images/image.png`}
             alt="lendsqr-logo"
           />
           <span
             className="material-symbols-outlined"
-            onClick={() => toggleNav()}
+            onClick={() => toggleSidebar()}
           >
             menu
           </span>
