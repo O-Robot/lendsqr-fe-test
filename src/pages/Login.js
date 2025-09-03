@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [passwordType, setPasswordType] = useState("password");
   const [showPassword, setShowPassword] = useState(false);
-  const [passwordInput, setpasswordInput] = useState("");
+  const [passwordInput, setpasswordInput] = useState("123467890");
 
   let history = useNavigate();
   const passwordChange = (e) => {
@@ -47,7 +47,7 @@ const Login = () => {
             <h4>Welcome!</h4>
             <p>Enter details to login.</p>
             <form className="login-form">
-              <input placeholder="Email" />
+              <input placeholder="Email" value="test@ogooluwaniadewale.com" />
               <div className="password-input-box">
                 <input
                   placeholder="Password"
@@ -60,8 +60,12 @@ const Login = () => {
                 </span>
               </div>
               <div className="signup">
-                <a href="/#"><b>Forgot Password?</b></a>
-                <a href="/#"><b>SIGN UP</b></a>
+                <a href="/#">
+                  <b>Forgot Password?</b>
+                </a>
+                <a href="/#">
+                  <b>SIGN UP</b>
+                </a>
               </div>
               <button
                 onClick={() => history("/dashboard")}
