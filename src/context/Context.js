@@ -18,8 +18,11 @@ export const Provider = ({ children }) => {
   };
 
   useEffect(() => {
+    console.log("got here");
     const getUsers = async () => {
+      console.log("here too");
       const response = await api.get("/");
+      console.log("res", response);
       const responseArr = Object.values(response.data);
       localStorage.setItem("users", JSON.stringify(responseArr));
       setUsers(responseArr);
