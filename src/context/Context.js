@@ -27,7 +27,7 @@ export const Provider = ({ children }) => {
       localStorage.setItem("users", JSON.stringify(responseArr));
       setUsers(responseArr);
     };
-    return getUsers;
+    getUsers();
   }, []);
 
   const value = {
